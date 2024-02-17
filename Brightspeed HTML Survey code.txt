@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css"/>
+  <title>Brightspeed Satisfaction Survey Form</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="title">Brightspeed Satisfaction Survey Form</h1>
+    <p id="description">Tell Us How We Are Doing!</p>
+
+    <form id="survey-form">
+      <label for="name" id="name-label">Your Name:</label>
+      <input type="text" id="name" required placeholder="Name">
+
+      <label for="email" id="email-label">Your Email:</label>
+      <input type="email" id="email" required placeholder="Email">
+
+      <label for="number" id="number-label">Your Rating Number (1-10):</label>
+      <input type="number" id="number" min="1" max="10" placeholder="Number">
+
+      <label for="dropdown">Select your Connection type:</label>
+      <select id="dropdown">
+        <option value="HSI">High-Speed Internet (HSI)</option>
+        <option value="Fiber">Fiber</option>
+        <option value="Copper">Copper</option>
+      </select>
+
+      <fieldset>
+        <legend id="radio-label">Select Your Option:</legend>
+        <label for="Business">
+          <input type="radio" id="Business" name="purpose" value="Business"> Business
+        </label>
+        <label for="Personal">
+          <input type="radio" id="Personal" name="purpose" value="Personal" required> Personal
+        </label>
+      </fieldset>
+
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" placeholder="Place Additional Comments Here"></textarea>
+
+      <fieldset>
+        <legend>Do you want to be contacted?</legend>
+        <label for="Yes">
+          <input type="checkbox" id="Yes" name="contact" value="Y" required> Yes
+        </label>
+        <label for="No">
+          <input type="checkbox" id="No" name="contact" value="N" required> No
+        </label>
+        <input type="checkbox" style="display: none;" id="hiddenCheckbox" name="contact" required>
+      </fieldset>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
